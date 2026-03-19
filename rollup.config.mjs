@@ -7,7 +7,9 @@ import dts from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
 import tailwindcss from 'tailwindcss';
 import { visualizer } from 'rollup-plugin-visualizer';
-import packageJson from './package.json' assert { type: 'json' };
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const packageJson = require('./package.json');
 
 export default [
   // Main bundle with all components
