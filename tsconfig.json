@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": false,
+    "maxNodeModuleJsDepth": 1,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "declarationDir": "types",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "allowUnreachableCode": false,
+    "skipLibCheck": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "."
+  },
+  "exclude": [
+    "node_modules",
+    "src/index.tsx",
+    "src/App.tsx",
+    "src/reportWebVitals.ts",
+    "src/setupTests.ts",
+    "dist"
+  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}

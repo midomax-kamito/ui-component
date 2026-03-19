@@ -1,0 +1,76 @@
+import {
+  Canvas,
+  Controls,
+  Description,
+  Meta,
+  Subtitle,
+  Story,
+  ArgTypes,
+} from '@storybook/blocks';
+
+import * as ToastStories from './Toast.stories';
+
+# Toast
+
+<Meta of={ToastStories} />
+
+<Subtitle>A succinct message that is displayed temporarily</Subtitle>
+
+<Canvas>
+  <Story of={ToastStories.Example} />
+</Canvas>
+
+Using hook `const { toast } = useToast()` and usage `toast` callback.
+
+```
+import { Toaster } from "@/components/ui/toaster"
+```
+
+```
+export const ToastDemo = () => {
+  const { toast } = useToast()
+
+  return (
+    <Button
+      onClick={() => {
+        toast({
+          title: "Scheduled: Catch up",
+          description: "Friday, February 10, 2023 at 5:57 PM",
+        })
+      }}
+    >
+      Show Toast
+    </Button>
+  )
+}
+
+```
+
+## **Usage**
+
+### Add `<Toaster /> in root project`
+
+**Example:** `app/layout.tsx`
+
+```
+import { Toaster } from "@/components/ui/toaster"
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head />
+      <body>
+        <main>{children}</main>
+        <Toaster />
+      </body>
+    </html>
+  )
+}
+
+```
+
+## **Props**
+
+[See more props](https://www.radix-ui.com/primitives/docs/components/toast)
+
+<ArgTypes of={ToastStories} />

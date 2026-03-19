@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary-50: 239 246 255; /* #EFF6FF */
+        --primary-100: 219 234 254; /* #DBEAFE */
+        --primary-200: 191 219 254; /* #BFDBFE */
+        --primary-300: 147 197 253; /* #93C5FD */
+        --primary-400: 96 165 250; /* #60A5FA */
+        --primary-500: 59 130 246; /* #3B82F6 */
+        --primary-600: 37 99 235; /* #2563EB */
+        --primary-700: 29 78 216; /* #1D4ED8 */
+        --primary-800: 30 64 175; /* #1E40AF */
+        --primary-900: 30 58 138; /* #1E3A8A */
+        --primary-950: 23 37 84; /* #172554 */
+        --gray-50: 250 250 250; /* #FAFAFA */
+        --gray-100: 244 244 245; /* #F4F4F5 */
+        --gray-200: 228 228 231; /* #E4E4E7 */
+        --gray-300: 212 212 216; /* #D4D4D8 */
+        --gray-400: 161 161 170; /* #A1A1AA */
+        --gray-500: 113 113 122; /* #71717A */
+        --gray-600: 82 82 91; /* #52525B */
+        --gray-700: 63 63 70; /* #3F3F46 */
+        --gray-800: 39 39 42; /* #27272A */
+        --gray-900: 24 24 27; /* #18181B */
+        --gray-950: 9 9 11; /* #09090B */
+        --red-50: 254 242 242; /* #FEF2F2 */
+        --red-100: 254 226 226; /* #FEE2E2 */
+        --red-200: 254 202 202; /* #FECACA */
+        --red-300: 252 165 165; /* #FCA5A5 */
+        --red-400: 248 113 113; /* #F87171 */
+        --red-500: 239 68 68; /* #EF4444 */
+        --red-600: 220 38 38; /* #DC2626 */
+        --red-700: 185 28 28; /* #B91C1C */
+        --red-800: 153 27 27; /* #991B1B */
+        --red-900: 127 29 29; /* #7F1D1D */
+        --red-950: 69 10 10; /* #450A0A */
+        --pink-50: 253 242 248; /* #FDF2F8 */
+        --pink-100: 252 231 243; /* #FCE7F3 */
+        --pink-200: 251 207 232; /* #FBCFE8 */
+        --pink-300: 249 168 212; /* #F9A8D4 */
+        --pink-400: 244 114 182; /* #F472B6 */
+        --pink-500: 236 72 153; /* #EC4899 */
+        --pink-600: 219 39 119; /* #DB2777 */
+        --pink-700: 190 24 93; /* #BE185D */
+        --pink-800: 157 23 77; /* #9D174D */
+        --pink-900: 131 24 67; /* #831843 */
+        --pink-950: 80 7 36; /* #500724 */
+        --orange-50: 255 247 237; /* #FFF7ED */
+        --orange-100: 255 237 213; /* #FFEDD5 */
+        --orange-200: 254 215 170; /* #FED7AA */
+        --orange-300: 253 186 116; /* #FDBA74 */
+        --orange-400: 251 146 60; /* #FB923C */
+        --orange-500: 249 115 22; /* #F97316 */
+        --orange-600: 234 88 12; /* #EA580C */
+        --orange-700: 194 65 12; /* #C2410C */
+        --orange-800: 154 52 18; /* #9A3412 */
+        --orange-900: 124 45 18; /* #7C2D12 */
+        --orange-950: 67 20 7; /* #431407 */
+        --yellow-50: 255 251 235; /* #FFFBEB */
+        --yellow-100: 254 243 199; /* #FEF3C7 */
+        --yellow-200: 253 230 138; /* #FDE68A */
+        --yellow-300: 252 211 77; /* #FCD34D */
+        --yellow-400: 251 191 36; /* #FBBF24 */
+        --yellow-500: 245 158 11; /* #F59E0B */
+        --yellow-600: 217 119 6; /* #D97706 */
+        --yellow-700: 180 83 9; /* #B45309 */
+        --yellow-800: 146 64 14; /* #92400E */
+        --yellow-900: 120 53 15; /* #78350F */
+        --yellow-950: 69 26 3; /* #451A03 */
+        --green-50: 236 253 245; /* #ECFDF5 */
+        --green-100: 209 250 229; /* #D1FAE5 */
+        --green-200: 167 243 208; /* #A7F3D0 */
+        --green-300: 110 231 183; /* #6EE7B7 */
+        --green-400: 52 211 153; /* #34D399 */
+        --green-500: 16 185 129; /* #10B981 */
+        --green-600: 5 150 105; /* #059669 */
+        --green-700: 4 120 87; /* #047857 */
+        --green-800: 6 95 70; /* #065F46 */
+        --green-900: 6 78 59; /* #064E3B */
+        --green-950: 2 44 34; /* #022C22 */
+        --teal-50: 240 253 250; /* #F0FDFA */
+        --teal-100: 204 251 241; /* #CCFBF1 */
+        --teal-200: 153 246 228; /* #99F6E4 */
+        --teal-300: 94 234 212; /* #5EEAD4 */
+        --teal-400: 45 212 191; /* #2DD4BF */
+        --teal-500: 20 184 166; /* #14B8A6 */
+        --teal-600: 13 148 136; /* #0D9488 */
+        --teal-700: 15 118 110; /* #0F766E */
+        --teal-800: 17 94 89; /* #115E59 */
+        --teal-900: 19 78 74; /* #134E4A */
+        --teal-950: 4 47 46; /* #042F2E */
+        --sky-50: 240 249 255; /* #F0F9FF */
+        --sky-100: 224 242 254; /* #E0F2FE */
+        --sky-200: 186 230 253; /* #BAE6FD */
+        --sky-300: 125 211 252; /* #7DD3FC */
+        --sky-400: 56 189 248; /* #38BDF8 */
+        --sky-500: 14 165 233; /* #0EA5E9 */
+        --sky-600: 2 132 199; /* #0284C7 */
+        --sky-700: 3 105 161; /* #0369A1 */
+        --sky-800: 7 89 133; /* #075985 */
+        --sky-900: 12 74 110; /* #0C4A6E */
+        --sky-950: 8 47 73; /* #082F49 */
+        --indigo-50: 238 242 255; /* #EEF2FF */
+        --indigo-100: 224 231 255; /* #E0E7FF */
+        --indigo-200: 199 210 254; /* #C7D2FE */
+        --indigo-300: 165 180 252; /* #A5B4FC */
+        --indigo-400: 129 140 248; /* #818CF8 */
+        --indigo-500: 99 102 241; /* #6366F1 */
+        --indigo-600: 79 70 229; /* #4F46E5 */
+        --indigo-700: 67 56 202; /* #4338CA */
+        --indigo-800: 55 48 163; /* #3730A3 */
+        --indigo-900: 49 46 129; /* #312E81 */
+        --indigo-950: 30 27 75; /* #1E1B4B */
+        --purple-50: 250 245 255; /* #FAF5FF */
+        --purple-100: 243 232 255; /* #F3E8FF */
+        --purple-200: 233 213 255; /* #E9D5FF */
+        --purple-300: 216 180 254; /* #D8B4FE */
+        --purple-400: 192 132 252; /* #C084FC */
+        --purple-500: 168 85 247; /* #A855F7 */
+        --purple-600: 147 51 234; /* #9333EA */
+        --purple-700: 126 34 206; /* #7E22CE */
+        --purple-800: 107 33 168; /* #6B21A8 */
+        --purple-900: 88 28 135; /* #581C87 */
+        --purple-950: 59 7 100; /* #3B0764 */
+    }
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.spinner::before,
+.spinner::after {
+    --c: radial-gradient(farthest-side, rgba(12, 72, 237, 0.83) 92%, #0000);
+    content: "";
+    grid-area: 1/1;
+    background:
+        var(--c) 50% 0,
+        var(--c) 50% 100%,
+        var(--c) 100% 50%,
+        var(--c) 0 50%;
+    background-repeat: no-repeat;
+}
