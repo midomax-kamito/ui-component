@@ -1,3 +1,4 @@
 import { IDatePicker } from './DatePicker';
-export { IDatePicker };
+import { IDateRangePicker } from './DateRangePicker';
+export { IDatePicker, IDateRangePicker };
 

@@ -6,7 +6,6 @@ import {
   Combobox,
   Form,
   TreeSelect,
-  Input,
   OptionItemType,
   TreeDataType,
   Empty,
@@ -30,7 +29,7 @@ import {
   Spin,
   Progress,
 } from './components/ui';
-import { IDatePicker } from './components/ui/date-picker';
+import { IDatePicker, IDateRangePicker } from './components/ui/date-picker';
 import { Button } from './components/ui/button';
 import {
   CheckCircle,
@@ -40,7 +39,6 @@ import {
   X,
 } from '@phosphor-icons/react';
 import dayjs from 'dayjs';
-import { Options } from './components/ui/document-editor';
 import { cn } from './lib';
 
 const { DatePicker, TextareaAutosize, NumberInput, SingleSelect } =
@@ -267,19 +265,8 @@ function App() {
   useEffect(() => {
     form.setFieldsValue(initValue);
   }, [initValue]);
-  return (
+  return  (
     <div className="flex flex-col items-center h-screen gap-5 App">
-      {/* <Table
-        {...{
-          tableColumns,
-          tableData,
-          total: 100,
-          page,
-          totalPage: 10,
-          setPage,
-          isDynamicColumn: false,
-        }}
-      /> */}
       <div className="w-[500px] min-h-[550px] mt-20 border">
         <Empty />
       </div>
@@ -318,6 +305,14 @@ function App() {
             showSecond: false,
           }}
           format={'DD/MM/YYYY HH:mm'}
+          localeConfig={{
+            today: 'Hiện tại',
+            ok: 'Áp dụng',
+            now: 'Hiện tại',
+          }}
+        />
+        <IDateRangePicker
+          format={'DD/MM/YYYY'}
           localeConfig={{
             today: 'Hiện tại',
             ok: 'Áp dụng',
