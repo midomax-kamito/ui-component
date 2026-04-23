@@ -44,9 +44,10 @@ export default [
       },
     ],
     treeshake: {
-      moduleSideEffects: false, // Assume modules have no side effects
-      propertyReadSideEffects: false, // Ignore property access side effects
-      tryCatchDeoptimization: false, // Don't turn off try-catch-tree-shaking
+      // Allow CSS imports to be preserved as side effects
+      moduleSideEffects: (id) => /\.css$/.test(id),
+      propertyReadSideEffects: false,
+      tryCatchDeoptimization: false,
     },
     plugins: [
       resolve({
@@ -84,6 +85,9 @@ export default [
       }),
     ],
     external: (id) => {
+      // Never externalize CSS files — PostCSS must process and bundle them
+      if (/\.css$/.test(id)) return false;
+
       // Externalize all node_modules except for small utility libraries
       if (id.includes('node_modules')) {
         // Keep small utilities bundled
